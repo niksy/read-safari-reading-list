@@ -1,0 +1,45 @@
+{
+  "name": "read-safari-reading-list",
+  "version": "0.0.0",
+  "description": "Read and parse Safari Reading List.",
+  "main": "index.js",
+  "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "eslint {index,test/**/*}.js && istanbul cover _mocha test/**/*.js && istanbul check-coverage"
+  },
+  "dependencies": {
+    "pify": "^2.3.0",
+    "simple-plist": "^0.1.4",
+    "untildify": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.1.1",
+    "eslint-config-niksy": "^3.0.1",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.5.3"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "bookmarks",
+    "ios",
+    "list",
+    "mac",
+    "osx",
+    "reading",
+    "safari"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niksy/read-safari-reading-list.git"
+  },
+  "bugs": {
+    "url": "https://github.com/niksy/read-safari-reading-list/issues"
+  },
+  "homepage": "https://github.com/niksy/read-safari-reading-list#readme"
+}

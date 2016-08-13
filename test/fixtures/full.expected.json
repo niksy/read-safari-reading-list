@@ -1,0 +1,80 @@
+[
+	{
+		"title": "http://blog.andrewray.me/webpack-when-to-use-and-why/",
+		"description": "TL;DR It took me a long time to understand Webpack and how it fits in the build process. This is what I wish someone had told me. What is Webpack? How does Webpack compare to Grunt, Gulp, Browserify, Brunch, etc? What'",
+		"url": "http://blog.andrewray.me/webpack-when-to-use-and-why/",
+		"dateAdded": "2016-08-04T05:56:42.000Z"
+	},
+	{
+		"title": "https://www.youtube.com/watch?v=IxXGMesq_8s",
+		"description": "YouTube",
+		"url": "https://m.youtube.com/watch?v=IxXGMesq_8s",
+		"dateAdded": "2016-08-03T21:44:09.000Z"
+	},
+	{
+		"title": "borderline inhumane",
+		"description": "The popular breed has a litany of health problems — and so little genetic diversity that it's probably beyond saving.",
+		"url": "https://www.washingtonpost.com/news/animalia/wp/2016/08/02/why-breeding-bulldogs-is-borderline-inhumane/",
+		"dateAdded": "2016-08-03T12:33:46.000Z"
+	},
+	{
+		"title": "elijahmanor/eslint-plugin-smells: ESLint rules for JavaScript Smells",
+		"description": "elijahmanor / eslint-plugin-smells Star (132) Watch ESLint rules for JavaScript Smells master Latest commit by elijahmanor about 1 year ago View code Jump to file README.md eslint-plugin-smells ESLint rules",
+		"url": "https://github.com/elijahmanor/eslint-plugin-smells",
+		"dateAdded": "2016-08-03T04:41:01.000Z"
+	},
+	{
+		"title": "https://twitter.com/paul_kinlan/status/760249539613888518",
+		"description": "Open in app See what's happening on Twitter Paul Kinlan – ‏@Paul_Kinlan The headless web. The future of the web outside the browser. https://paul.kinlan.me/the-headless-web/ … Paul Kinlan The Headless Web Do we ne",
+		"url": "https://mobile.twitter.com/Paul_Kinlan/status/760249539613888518",
+		"dateAdded": "2016-08-02T07:05:36.000Z"
+	},
+	{
+		"title": "https://twitter.com/mathias/status/724642417996083201",
+		"description": "Open in app See what's happening on Twitter Mathias Bynens – ‏@mathias 📹 I spoke at #fronteers about the Dark Side of front-end performance. Slides + video + Q&A + summary: https://dev.opera.com/blog",
+		"url": "https://mobile.twitter.com/mathias/status/724642417996083201",
+		"dateAdded": "2016-08-02T07:03:15.000Z"
+	},
+	{
+		"title": "https://github.com/mochajs/mocha/blob/master/CHANGELOG.md#300--2016-07-31",
+		"description": "💥 Breaking Changes ⚠️ Due to the increasing difficulty of applying security patches made within its dependency tree, as well as looming incompatibilities with Node.js v7.0, Mocha no longer supports Node",
+		"url": "https://github.com/mochajs/mocha/blob/master/CHANGELOG.md#300--2016-07-31",
+		"dateAdded": "2016-08-01T16:55:29.000Z"
+	},
+	{
+		"title": "“Array” Methods",
+		"description": "_.chunk(array, [size=1]) # Ⓢ Ⓝ Creates an array of elements split into groups the length of size. If array can’t be split evenly, the final chunk will be the remaining elements. Since 3.0.0 Arguments array (Array): The",
+		"url": "https://lodash.com/docs",
+		"dateAdded": "2016-07-31T12:36:22.000Z"
+	},
+	{
+		"title": "https://www.npmjs.com/package/axe-core",
+		"description": "Accessibility engine for automated Web UI testing",
+		"url": "https://www.npmjs.com/package/axe-core",
+		"dateAdded": "2016-07-31T09:11:41.000Z"
+	},
+	{
+		"title": "https://twitter.com/nexdrew/status/763741380418105344",
+		"description": "Open in app See what's happening on Twitter your car's on fire – ‏@nexdrew Still using npm 2? You're missing out on the ever-useful `npm it` command. Upgrade today! npm i -g npm@latest 7:18 AM - 11 Aug 2016 2 RETWEE",
+		"url": "https://mobile.twitter.com/nexdrew/status/763741380418105344",
+		"dateAdded": "2016-08-11T17:42:38.000Z"
+	},
+	{
+		"title": "https://medium.com/the-vue-point/the-state-of-vue-1655e10a340a#.f9smc0a4o",
+		"description": "2.0 is now in RC!",
+		"url": "https://medium.com/the-vue-point/the-state-of-vue-1655e10a340a#.f9smc0a4o",
+		"dateAdded": "2016-08-11T20:04:50.000Z"
+	},
+	{
+		"title": "http://mobile.nytimes.com/2016/08/07/opinion/sunday/do-your-friends-actually-like-you.html?_r=0&referer=",
+		"description": "THINK of all the people with whom you interact during the course of a day, week, month and year. The many souls with whom you might exchange a greeting or give a warm embrace; engage in chitchat or have a deeper conversa",
+		"url": "http://mobile.nytimes.com/2016/08/07/opinion/sunday/do-your-friends-actually-like-you.html?_r=0&referer=",
+		"dateAdded": "2016-08-10T16:00:33.000Z"
+	},
+	{
+		"title": "https://mobile.twitter.com/PostCSS/status/763133001014321152",
+		"description": "Open in app See what's happening on Twitter PostCSS – ‏@PostCSS New plugin to use clip-path: polygon() in Firefox by generating SVG https://github.com/komachi/postcss-clip-path-polyfill … 3:01 PM - 9 Aug 2016 6 RET",
+		"url": "https://mobile.twitter.com/PostCSS/status/763133001014321152",
+		"dateAdded": "2016-08-11T07:01:07.000Z"
+	}
+]
