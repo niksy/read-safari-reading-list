@@ -1,6 +1,6 @@
 {
   "name": "read-safari-reading-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read and parse Safari Reading List.",
   "main": "index.js",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com/)",
