@@ -47,8 +47,7 @@ Reads and parses Safari Reading List binary property list (or any property list 
 #### filePath
 
 Type: `String`  
-Default: `~/Library/Safari/Bookmarks.plist`  
-**Required**
+Default: `~/Library/Safari/Bookmarks.plist`
 
 Path to property list.
 

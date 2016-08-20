@@ -28,7 +28,15 @@ function getItemTitle ( item ) {
  */
 module.exports = function ( fp ) {
 
-	return pify(plist.readFile)(untildify(path.resolve(fp) || READING_LIST_FILE))
+	var resolvedFp;
+
+	if ( typeof fp === 'undefined' ) {
+		resolvedFp = untildify(READING_LIST_FILE);
+	} else {
+		resolvedFp = untildify(path.resolve(fp));
+	}
+
+	return pify(plist.readFile)(resolvedFp)
 		.then(function ( res ) {
 
 			return res.Children
