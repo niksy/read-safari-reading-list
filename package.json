@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "pify": "^2.3.0",
-    "simple-plist": "^0.1.4",
+    "simple-plist": "^1.1.0",
     "untildify": "^3.0.2"
   },
   "devDependencies": {
