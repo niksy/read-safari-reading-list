@@ -1,19 +1,20 @@
-var path = require('path');
-var pify = require('pify');
-var plist = require('simple-plist');
-var untildify = require('untildify');
-var READING_LIST_FILE = '~/Library/Safari/Bookmarks.plist';
+import path from 'path';
+import pify from 'pify';
+import plist from 'simple-plist';
+import untildify from 'untildify';
+
+const READING_LIST_FILE = '~/Library/Safari/Bookmarks.plist';
 
 /**
- * @param  {Object} item
+ * @param  {object} item
  *
- * @return {String}
+ * @returns {string}
  */
-function getItemTitle ( item ) {
-	var title = '';
-	if ( item.URIDictionary && item.URIDictionary.title ) {
+function getItemTitle(item) {
+	let title = '';
+	if (item.URIDictionary && item.URIDictionary.title) {
 		title = item.URIDictionary.title;
-	} else if ( item.ReadingListNonSync && item.ReadingListNonSync.Title ) {
+	} else if (item.ReadingListNonSync && item.ReadingListNonSync.Title) {
 		title = item.ReadingListNonSync.Title;
 	} else {
 		title = item.URLString;
@@ -22,45 +23,30 @@ function getItemTitle ( item ) {
 }
 
 /**
- * @param  {String} fp
+ * @param  {string} filePath
  *
- * @return {Promise}
+ * @returns {Promise}
  */
-module.exports = function ( fp ) {
+export default async (filePath) => {
+	let resolvedFp;
 
-	var resolvedFp;
-
-	if ( typeof fp === 'undefined' ) {
+	if (typeof filePath === 'undefined') {
 		resolvedFp = untildify(READING_LIST_FILE);
 	} else {
-		resolvedFp = untildify(path.resolve(fp));
+		resolvedFp = untildify(path.resolve(filePath));
 	}
 
-	return pify(plist.readFile)(resolvedFp)
-		.then(function ( res ) {
+	const response = await pify(plist.readFile)(resolvedFp);
 
-			return res.Children
-				.filter(function ( item ) {
-					return item.Title === 'com.apple.ReadingList';
-				})
-				.map(function ( item ) {
-					if ( Array.isArray(item.Children) ) {
-						return item.Children;
-					}
-					return [];
-				})
-				.reduce(function ( prev, next ) {
-					return prev.concat(next);
-				}, [])
-				.map(function ( item ) {
-					return {
-						title: getItemTitle(item),
-						description: item.ReadingList.PreviewText,
-						url: item.URLString,
-						dateAdded: new Date(item.ReadingList.DateAdded).toJSON()
-					};
-				});
-
-		});
-
+	return response.Children.filter(
+		(item) => item.Title === 'com.apple.ReadingList'
+	)
+		.map((item) => (Array.isArray(item.Children) ? item.Children : []))
+		.reduce((previous, next) => previous.concat(next), [])
+		.map((item) => ({
+			title: getItemTitle(item),
+			description: item.ReadingList.PreviewText,
+			url: item.URLString,
+			dateAdded: new Date(item.ReadingList.DateAdded).toJSON()
+		}));
 };

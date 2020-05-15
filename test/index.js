@@ -1,37 +1,32 @@
-var assert = require('assert');
-var path = require('path');
-var proxyquire = require('proxyquire');
-var fn = require('../');
+import assert from 'assert';
+import path from 'path';
+import proxyquire from 'proxyquire';
+import fn from '../index';
 
-it('should parse Reading List with items to JSON object', function () {
+it('should parse Reading List with items to JSON object', async function() {
+	const { default: expected } = await import('./fixtures/full.expected.json');
 
-	var expected = require('./fixtures/full.expected.json');
+	const response = await fn('./test/fixtures/full.plist');
 
-	return fn('./test/fixtures/full.plist').then(function ( res ) {
-		assert.deepEqual(res, expected);
-	});
-
+	assert.deepEqual(response, expected);
 });
 
-it('should parse empty Reading List to empty array', function () {
+it('should parse empty Reading List to empty array', async function() {
+	const response = await fn('./test/fixtures/empty.plist');
 
-	return fn('./test/fixtures/empty.plist').then(function ( res ) {
-		assert.deepEqual(res.length, 0);
-	});
-
+	assert.deepEqual(response.length, 0);
 });
 
-it('should use default Reading List if file path argument is not provided', function () {
+it('should use default Reading List if file path argument is not provided', async function() {
+	const { default: expected } = await import('./fixtures/full.expected.json');
 
-	var expected = require('./fixtures/full.expected.json');
-	var pfn = proxyquire('../', {
-		untildify: function () {
+	const { default: pfn } = proxyquire('../index.js', {
+		untildify: function() {
 			return path.resolve('./test/fixtures/full.plist');
 		}
 	});
 
-	return pfn().then(function ( res ) {
-		assert.deepEqual(res, expected);
-	});
+	const response = await pfn();
 
+	assert.deepEqual(response, expected);
 });
